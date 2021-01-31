@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
+import DataArea from "../DataArea/index.js";
 
-function Main() {
-    <div>
-        Hello World!
-    </div>
+
+export default class Main extends Component {
+  render() {
+    return (
+      <>
+        <DataArea />
+      </>
+    );
+  }
 }
-
-export default Main;
