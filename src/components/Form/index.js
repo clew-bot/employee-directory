@@ -1,25 +1,20 @@
 import React from "react";
 
-function SearchForm(props) {
+
+function Searching({ handleSearchChange }) {
   return (
-    <form>
-      <div className="form-group">
-        <label htmlFor="search">Search:</label>
+    <div className="searchbox">
+      <form className="form-inline">
         <input
-          onChange={props.handleInputChange}
-          value={props.search}
-          name="search"
-          type="text"
           className="form-control"
-          placeholder="Search for an Employee"
-          id="search"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          //onChange event that will render search changes //
+          onChange={e => handleSearchChange(e)}
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-          Search
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
-
-export default SearchForm;
+export default Searching;

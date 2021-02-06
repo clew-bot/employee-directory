@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import DataTable from "../DataTable/index.js";
-import Header from "../Header/index.js";
+import Nav from "../Nav/Nav.js";
+import Wrapper from "../Wrapper/index.js";
 import API from "../../utils/API";
+
 
 export default class DataArea extends Component {
   state = {
@@ -88,14 +90,17 @@ export default class DataArea extends Component {
   render() {
     return (
       <>
-        <Header handleSearchChange={this.handleSearchChange} />
+      <Wrapper>
+        <Nav handleSearchChange={this.handleSearchChange} />
         <div className="data-area">
           <DataTable
             headings={this.headings}
             users={this.state.filteredUsers}
             handleSort={this.handleSort}
           />
+          
         </div>
+        </Wrapper>
       </>
     );
   }

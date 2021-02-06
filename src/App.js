@@ -10,10 +10,8 @@ function App() {
         <div className="App">
             <Wrapper>
             <Header />
-            <Main />
-                <Form></Form>
-                
-              
+            
+            <Main />  
             </Wrapper>
         </div>
     )

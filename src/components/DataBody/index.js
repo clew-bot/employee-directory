@@ -1,9 +1,10 @@
 import React from "react";
 
-
+//Formatting date //
 function DataBody({ users }) {
   function formatDate(date) {
     const dateArray = date.split("-");
+    console.log(dateArray)
     const year = dateArray[0];
     const month = dateArray[1];
     const dayArray = dateArray[2].split("T");
@@ -13,6 +14,7 @@ function DataBody({ users }) {
   }
 
   return (
+      //table body //
     <tbody>
       {users[0] !== undefined && users[0].name !== undefined ? (
         users.map(({ login, name, picture, phone, email, dob }) => {
